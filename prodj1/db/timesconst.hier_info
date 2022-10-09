@@ -1,0 +1,121 @@
+|timesconst
+s[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= times:z.result[0]
+s[4] <= times:z.result[1]
+s[5] <= times:z.result[2]
+s[6] <= times:z.result[3]
+s[7] <= times:z.result[4]
+s[8] <= times:z.result[5]
+s[9] <= times:z.result[6]
+s[10] <= times:z.result[7]
+s[11] <= times:z.cout
+a[0] => times:z.dataa[0]
+a[0] => s[0].DATAIN
+a[1] => times:z.dataa[1]
+a[1] => s[1].DATAIN
+a[2] => times:z.dataa[2]
+a[2] => s[2].DATAIN
+a[3] => times:z.dataa[3]
+a[3] => times:z.datab[0]
+a[4] => times:z.dataa[4]
+a[4] => times:z.datab[1]
+a[5] => times:z.dataa[5]
+a[5] => times:z.datab[2]
+a[6] => times:z.dataa[6]
+a[6] => times:z.datab[3]
+a[7] => times:z.dataa[7]
+a[7] => times:z.datab[4]
+
+
+|timesconst|times:z
+dataa[0] => dataa[0].IN1
+dataa[1] => dataa[1].IN1
+dataa[2] => dataa[2].IN1
+dataa[3] => dataa[3].IN1
+dataa[4] => dataa[4].IN1
+dataa[5] => dataa[5].IN1
+dataa[6] => dataa[6].IN1
+dataa[7] => dataa[7].IN1
+datab[0] => datab[0].IN1
+datab[1] => datab[1].IN1
+datab[2] => datab[2].IN1
+datab[3] => datab[3].IN1
+datab[4] => datab[4].IN1
+datab[5] => datab[5].IN1
+datab[6] => datab[6].IN1
+datab[7] => datab[7].IN1
+cout <= lpm_add_sub:LPM_ADD_SUB_component.cout
+result[0] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[1] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[2] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[3] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[4] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[5] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[6] <= lpm_add_sub:LPM_ADD_SUB_component.result
+result[7] <= lpm_add_sub:LPM_ADD_SUB_component.result
+
+
+|timesconst|times:z|lpm_add_sub:LPM_ADD_SUB_component
+dataa[0] => add_sub_p7i:auto_generated.dataa[0]
+dataa[1] => add_sub_p7i:auto_generated.dataa[1]
+dataa[2] => add_sub_p7i:auto_generated.dataa[2]
+dataa[3] => add_sub_p7i:auto_generated.dataa[3]
+dataa[4] => add_sub_p7i:auto_generated.dataa[4]
+dataa[5] => add_sub_p7i:auto_generated.dataa[5]
+dataa[6] => add_sub_p7i:auto_generated.dataa[6]
+dataa[7] => add_sub_p7i:auto_generated.dataa[7]
+datab[0] => add_sub_p7i:auto_generated.datab[0]
+datab[1] => add_sub_p7i:auto_generated.datab[1]
+datab[2] => add_sub_p7i:auto_generated.datab[2]
+datab[3] => add_sub_p7i:auto_generated.datab[3]
+datab[4] => add_sub_p7i:auto_generated.datab[4]
+datab[5] => add_sub_p7i:auto_generated.datab[5]
+datab[6] => add_sub_p7i:auto_generated.datab[6]
+datab[7] => add_sub_p7i:auto_generated.datab[7]
+cin => ~NO_FANOUT~
+add_sub => ~NO_FANOUT~
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+result[0] <= add_sub_p7i:auto_generated.result[0]
+result[1] <= add_sub_p7i:auto_generated.result[1]
+result[2] <= add_sub_p7i:auto_generated.result[2]
+result[3] <= add_sub_p7i:auto_generated.result[3]
+result[4] <= add_sub_p7i:auto_generated.result[4]
+result[5] <= add_sub_p7i:auto_generated.result[5]
+result[6] <= add_sub_p7i:auto_generated.result[6]
+result[7] <= add_sub_p7i:auto_generated.result[7]
+cout <= add_sub_p7i:auto_generated.cout
+overflow <= <GND>
+
+
+|timesconst|times:z|lpm_add_sub:LPM_ADD_SUB_component|add_sub_p7i:auto_generated
+cout <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => op_1.IN16
+dataa[1] => op_1.IN14
+dataa[2] => op_1.IN12
+dataa[3] => op_1.IN10
+dataa[4] => op_1.IN8
+dataa[5] => op_1.IN6
+dataa[6] => op_1.IN4
+dataa[7] => op_1.IN2
+datab[0] => op_1.IN17
+datab[1] => op_1.IN15
+datab[2] => op_1.IN13
+datab[3] => op_1.IN11
+datab[4] => op_1.IN9
+datab[5] => op_1.IN7
+datab[6] => op_1.IN5
+datab[7] => op_1.IN3
+result[0] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[5] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[6] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+result[7] <= op_1.DB_MAX_OUTPUT_PORT_TYPE
+
+
